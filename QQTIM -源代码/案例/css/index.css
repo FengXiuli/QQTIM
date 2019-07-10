@@ -1,0 +1,582 @@
+body {
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 1px 0 black, 0 0 5px black;
+}
+
+p {
+    padding: 0 0.5em;
+    margin: 0;
+}
+
+/*以下的标签是实际运用过程中经常会用到的清除内外边距，在做项目之前将这些复制粘贴上去即可*/
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    font-size: 100%;
+}
+
+html,
+body {
+    color: #333
+}
+
+body {
+    background: #fff;
+    overflow-x: hidden;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #12b7f5;
+}
+
+img {
+    border: none;
+}
+
+em {
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}
+/*在写下面的这些css的样式之前，要将上面的这些全部复制粘贴上去，以使页面上的布局规范，去掉不必要的麻烦*/
+/*????????????????????????????????????????????????????????????????????????????*/
+/*.clearfloat代表的是清除浮动，固定死的，记住即可，是为了避免父亲没有高度，而子盒子浮动，最终使得父亲无法被子盒子撑开，出现高度为0的情况，这样清除了浮动便会使得父亲的高度随着子盒子的高度而适应，清除浮动一共有4种方法，这只是其中的一种*/
+.clearfloat:after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+}
+
+.clearfloat {
+    zoom: 1;
+}
+/*top*/
+.max1600 {
+	max-width: 1600px;
+	/*min-width: 1007px;*/
+	margin: 0 auto;
+}
+.topbar {
+	width: 100%;
+	height: 120px;
+	/*background: yellow;*/
+	background: transparent url(../images/tim_bg_1.jpg) no-repeat center center;
+}
+.toppic {
+	max-width: 1170px;
+	min-width: 1080px;
+	width: 80%;
+	height: 90px;
+	margin: 0 auto;
+	/*background: green;*/
+}
+.topside {
+	float: left;
+	width: 50%;
+	height: 60px;
+	/*background: pink;*/
+}
+.logoLink {
+	float: left;
+	width: 20%;
+	height: 0;
+	line-height: 60px;
+	padding-left: 10px;
+	padding-top: 50px;
+	/*如何隐藏掉我是QQ并且使QQ图标居中对齐*/
+	background: transparent url(../images/imlogo_b.png) no-repeat left 6px;
+	overflow: hidden;
+}
+.topNav {
+	float: right;
+	width: 70%;
+}
+.topNav li a {
+	float: left;
+	width: 60px;
+	margin-right: 40px;
+	line-height: 60px;
+	/*background: #ffc;*/
+	text-align: center;
+}
+.topNav li a:hover {
+	background: #12b7f5;
+}
+.topNav li.current a {
+	background: #12b7f5;
+}
+.topTool {
+	float: right;
+	width: 35%;
+	height: 60px;
+	/*background: #ccf;*/
+}
+.topTool .barzc {
+	float: left;
+	display: block;
+	width: 40%;
+	height: 0;
+	padding: 39px 0 0 0;
+	margin: 18px 0 0 0;
+	text-align: center;
+	line-height: 60px;
+	/*如何隐藏掉我是QQ并且使QQ图标居中对齐*/
+	background: transparent url(../images/icons.png) no-repeat 0 -244px;
+	/*color: #fff;*/
+	overflow: hidden;
+}
+.topTool ul {
+	float: right;
+	width: 60%;
+}
+.topTool ul li {
+	float: left;
+	line-height: 60px;
+	margin-left: 25px;
+	margin-top: 14px;
+}
+
+
+.topTool .flashData {
+	float: right;
+	margin-top: 5px;
+}
+.topTool .flashData:hover {
+	text-decoration: underline;
+}
+
+/*banner开始*/
+.banner {
+    max-width: 1600px;
+    min-width: 1007px;
+    width: 100%;
+    height: 800px;
+    /*background: red;*/
+    /*position: relative;*/
+    background: transparent url(../images/tim_bg_1.jpg) no-repeat center center;
+    top: 0;
+    left: 0;
+}
+.top {
+    
+    width: 100%;
+    height: 490px;
+    position: relative;
+    /*background: yellow;*/
+}
+/*添加背景图，用margin，用padding没有用
+直接用图片可以用padding*/
+.top1 {
+    width: 297px;
+    height: 167px;
+    background: url(../images/logo.png) no-repeat center top;
+    margin: 0 auto;
+    /*padding-top: 50px;
+*/
+/*position: absolute;不占位置，脱离文本流，所以要么用relative，要么什么都不用*/
+}
+.top2 {
+    width: 382px;
+    height: 72px;
+    background: url(../images/btn.png) no-repeat center top;
+    margin: 10px auto;
+}
+.top3 {
+    width: 812px;
+    height: 147px;
+    background: url(../images/icon.png) no-repeat center top;
+    margin: 30px auto 0;
+}
+.bottom {
+    width: 1085px;
+    height: 314px;
+    /*margin: 0 auto;*/
+    /*background: green;*/
+    position: absolute;
+    left: 50%;
+    margin-left: -542.2px;
+}
+/*结束*/
+.content {
+    max-width: 1600px;
+    min-width: 1007px;
+    width: 100%;
+    height: 1464px;
+    /*background: yellow;*/
+}
+.qq {
+    width: 100%;
+    height:280px;
+    background: #fff url(../images/brand.png) no-repeat center top;
+}
+.girl {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #fff;
+    /*???????????????????????????要会将这些总结为一段的话，要么分开写，要么一起写，不要即分开又一起写，这个以最下面的为准，如果直接写background: url(../images/fisrtbg.jpg)的话，其余的都相当于默认值，所以上面写的便无法起作用了;？？？？？？？？？？？？*/
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-image: url(../images/fisrtbg.jpg);
+    
+}
+/*.activebg {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #fff;*/
+    /*?????????????????????????????????????????????//*/
+/*    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-image: url(../images/fisrtbg.jpg);
+}*/
+/*.box2 {
+    width: 100%;
+    height: 584px;
+    background: #fff;
+}*/
+.box {
+    width: 100%;
+    height: 763px;
+    position: relative;
+    /*background: red;*/
+}
+.phone {
+    width: 664px;
+    height: 763px;
+    position: absolute;
+    left: -32px;
+    bottom: 140px;
+    background: transparent url(../images/pic1.png) center center;
+}
+.box1 {
+    width: 487px;
+    height: 350px;
+    position: absolute;
+    padding: 100px 0 0;
+    right: 0;
+    top: 0;
+    /*background: green;*/
+}
+.communicate {
+    width: 487px;
+    height: 175px;
+    position: absolute;
+    
+    background: transparent url(../images/qcall_txt.png) no-repeat 0 0;
+}
+.box1 p {
+    width: 100%;
+    text-align: right;
+    line-height: 25px;
+    
+    opacity: 0.6;
+}
+.when {
+    margin: 115px 0 0;
+}
+.box1 .know {
+    margin: 15px 0 0;
+}
+.box1 .figs {
+    width: 100%;
+    padding-top: 44px;
+    min-height: 77px;  
+    background: transparent url(../images/qcall_figs.png) no-repeat 190px 20px;
+}
+
+.box1 .figs li {
+    float: right;
+    text-align: center;
+    padding-top: 46px;
+    border-left: 1px solid #e9e9e9;
+}
+
+.box1 .figs li.f01 {
+    width: 80px;
+    text-align: right;
+}
+.box1 .figs li.f02 {
+    width: 109px;
+}
+.box1 .figs li.f03 {
+    width: 116px;
+    text-align: left;
+    border: none;
+}
+
+.picture2 {
+    width: 100%;
+    height: 600px;
+    background: transparent url(../images/11.jpg) fixed no-repeat center 0;
+    background-size: 450px 600px;
+}
+.main {
+    width: 100%;
+    height: 584px;
+    position: relative;
+    left: 0;
+    top: 0;
+    /*background: red;*/
+}
+.main1 {
+    width: 450px;
+    height: 456px;
+    position: absolute;
+    left: 7px;
+    top: 115px;
+    /*background: green;*/
+}
+.main h2 {
+    width: 100%;
+    height: 0;
+    padding-top: 140px;
+    overflow: hidden;
+    background: transparent url(../images/txt.png) no-repeat 0 0;
+    /*z-index: 100;*/
+}
+.main1 p {
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    opacity: 0.6;
+}
+.main1 .learn {
+    position: absolute;
+    right: 66px;
+    color: #12b7f5;
+}
+.main1 .figs {
+    width: 100%;
+    padding-top: 64px;
+    min-height: 77px;
+    background: transparent url(../images/qfile_figs.png) no-repeat 7px 53px;
+} 
+.main1 .figs li {
+    float: left;
+    border-right: 1px solid #e9e9e9;
+    padding: 58px 0 0;
+    font-size: 14px;
+    color: #a0a0a0;
+    text-align: center;
+}
+.main1 .figs li.f01 {
+    width: 94px;
+    text-indent: 12px;
+}
+.main1 .figs li.f02 {
+    width: 112px;
+}
+.main1 .figs li.f03 {
+    width: 108px;
+}
+.qqfile {
+    width: 597px;
+    height: 330px;
+    position: absolute;
+    right: 0;
+    top: 201px;
+    background: transparent url(../images/pic2.png) no-repeat 0 0;
+}
+.picture3 {
+    width: 100%;
+    height: 600px;
+    background: #fff url(../images/blog.jpg) fixed no-repeat center 0; 
+}
+.tmain {
+    width: 100%;
+    height: 584px;
+    position: relative;
+    /*background: red;*/
+}
+.tmain1 {
+    width: 495px;
+    height: 460px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    /*background: green;*/
+}
+.tmain1 h2 {
+    width: 100%;
+    height: 0;
+    padding: 135px 0 0;
+    background: transparent url(../images/qblog_txt.png) no-repeat 0 0;
+    overflow: hidden;
+}
+.tmain1 p {
+    padding-right: 10px;
+    text-align: right;
+    line-height: 20px;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+}
+.tmain1 .tlearn {
+    padding-right: 26px;
+    margin: 20px 0 0;
+    color: #12b7f5;
+}
+.tmain1 .tfigs {
+    width: 100%;
+
+    padding-top: 44px;
+    min-height: 77px;
+    background: transparent url(../images/qblog_figs.png) no-repeat 233px 36px;
+}
+
+.tmain1 .tfigs li {
+    
+    text-align: center;
+    padding: 58px 0 0;
+    float: right;
+    border-left: 1px solid #e9e9e9;
+}
+.tmain1 .tfigs li.tf01 {
+    width: 101px;
+    text-align: right;
+}
+.tmain1 .tfigs li.tf02 {
+    width: 80px;
+}
+.tmain1 .tfigs li.tf03 {
+    width: 88px;
+    text-align: left;
+    border: none;
+}
+.findfile {
+    width: 344px;
+    height: 506px;
+    position: absolute;
+    left: 34px;
+    bottom: 0;
+    background: transparent url(../images/pic3.png) no-repeat -0 0;
+}
+.foot {
+    width: 100%;
+    height: 382px;
+    position: relative;
+    background: #2a2a2a;
+    color: #979797;
+}
+.foot1 {
+    width: 489px;
+    height: 118px;
+    /*position: absolute;*/
+    padding: 20px 0 0 35px;
+    /*background: red;*/
+    overflow: hidden;
+    color: #979797;
+}
+.foot a:link, .foot a:visited {
+
+}
+a {
+    float: left;
+    padding-top: 54px;
+    
+}
+.a1 {
+    width: 80px;
+    height: 83px;
+    /*float: left;*/
+    display: block;  
+    margin: 15px 15px 0 0;
+    background: transparent url(../images/plats1.png) no-repeat 0 0;
+}
+.a2 {
+    width: 80px;
+    height: 83px;
+    display: block;
+    margin: 15px 15px 0 0;
+    background: transparent url(../images/plats1.png) no-repeat -105px 0;
+    /*background-position: -210px 0;*/
+}
+.a3 {
+    width: 80px;
+    height: 83px;
+    display: block;
+    margin: 15px 15px 0 0;
+    background: transparent url(../images/plats1.png) no-repeat -210px 0;
+}
+.a4 {
+    width: 80px;
+    height: 83px;
+    display: block;
+    margin: 15px 15px 0 0;
+    background: transparent url(../images/plats1.png) no-repeat -326px 0;
+}
+.foot6 {
+    width: 50%;
+    height: 205px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*float: left;*/
+    /*background: yellow;*/
+}
+.foot6 div {
+    float: left;
+    margin: 34px 50px 0;
+    text-align: center;
+    line-height: 25px;
+}
+.foot5 {
+    width: 100%;
+    height: 50px;
+    margin: 76px auto;
+    text-align: center;
+    /*background: yellow;*/
+}
